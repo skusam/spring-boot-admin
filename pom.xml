@@ -12,7 +12,7 @@
 
 	<groupId>de.infodesign</groupId>
 	<artifactId>spring-boot-admin</artifactId>
-	<version>4.0.2</version>
+	<version>1.0.0</version>
 
 	<properties>
 		<java.version>21</java.version>
@@ -46,6 +46,17 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>build-info</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>io.github.git-commit-id</groupId>
+				<artifactId>git-commit-id-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
