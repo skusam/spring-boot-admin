@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: Spring Boot Admin
+  boot:
+    admin:
+      client:
+        url: http://localhost:8500
+        instance:
+          service-base-url: http://localhost:8500
+
+server:
+  port: 8500
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+    shutdown:
+      enabled: true
